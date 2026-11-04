@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Estefany Salas, Engineering Manager. I lead product and engineering teams that deliver business results.">
+<meta property="og:title" content="Estefany Salas · Engineering Manager">
+<meta property="og:description" content="I lead product and engineering teams that deliver business results.">
+<title>Estefany Salas CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+<style>
+body{margin:0}[hidden]{display:none!important}img{max-width:100%}
+/* Layout: product page for a person. Single light theme by choice; lime, sky and pink highlights mark EM, PM and developer. */
+:root {
+  color-scheme: light;
+  --bg: #ffffff; --surface: #f6f7f5; --ink: #111312; --muted: #5f6662; --faint: #767d79; --line: #e7e9e6;
+  --em: #d7f36a; --em-ink: #3d5200; --pm: #b9e3ff; --pm-ink: #0b4d7a; --dev: #ffc9e4; --dev-ink: #8a1c55;
+  --f-sans: "Geist", "Helvetica Neue", Arial, sans-serif;
+  --f-serif: "Instrument Serif", Georgia, serif;
+  --f-mono: "Geist Mono", ui-monospace, Menlo, monospace;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-sans); font-size: 16px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 1040px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; border-radius: 6px; }
+.site[data-lang="en"] [lang="es"], .site[data-lang="es"] [lang="en"] { display: none !important; }
+
+.serif { font-family: var(--f-serif); font-style: italic; font-weight: 400; letter-spacing: -.01em; }
+.hl { padding: 0 .16em; border-radius: .18em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.hl-em { background: var(--em); } .hl-pm { background: var(--pm); } .hl-dev { background: var(--dev); }
+
+nav.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: rgba(255,255,255,.92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+nav.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px 16px; padding-block: 14px; flex-wrap: wrap; }
+.brand { font-weight: 600; font-size: 15px; text-decoration: none; white-space: nowrap; }
+.navright { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.navlinks { display: flex; gap: 22px; font-size: 14px; color: var(--muted); }
+.navlinks a { text-decoration: none; } .navlinks a:hover { color: var(--ink); }
+.seg { display: inline-flex; gap: 2px; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
+.seg button { font: 500 12px/1 var(--f-mono); border: 0; background: transparent; color: var(--muted); padding: 7px 11px; border-radius: 999px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--bg); color: var(--ink); box-shadow: 0 1px 2px rgba(17,19,18,.12); }
+.btn { display: inline-flex; align-items: center; gap: 8px; font: 500 14px/1 var(--f-sans); text-decoration: none; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); cursor: pointer; }
+.btn.dark { background: var(--ink); color: #fff; border-color: var(--ink); }
+.btn.dark:hover { background: #2a2e2c; }
+.btn .mono { font-family: var(--f-mono); font-size: 13px; }
+.btn svg { width: 16px; height: 16px; flex: none; }
+.toast { font: 500 12px/1 var(--f-mono); color: var(--em-ink); background: var(--em); padding: 6px 9px; border-radius: 6px; }
+
+.hero { padding-block: 64px 44px; }
+h1 { font-weight: 600; font-size: clamp(38px, 6.2vw, 68px); line-height: 1.03; letter-spacing: -.035em; margin: 0; max-width: 15.5ch; text-wrap: balance; }
+.lede { font-size: clamp(17px, 2vw, 20px); color: var(--muted); max-width: 40ch; margin: 22px 0 0; }
+.lede .hl { color: var(--ink); }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 30px; }
+.actions .btn { padding: 12px 16px; font-size: 14.5px; }
+
+.metrics { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+.metric { padding: 22px; border-left: 1px solid var(--line); min-width: 0; }
+.metric:first-child { border-left: 0; }
+.metric .n { font-weight: 600; font-size: clamp(28px, 3.2vw, 34px); letter-spacing: -.03em; line-height: 1; font-variant-numeric: tabular-nums; }
+.metric .n .arrow { color: #9aa19d; font-weight: 400; }
+.metric .l { color: var(--muted); font-size: 14px; margin-top: 10px; }
+
+section.block { padding-top: 88px; }
+h2 { font-weight: 600; font-size: clamp(28px, 3.4vw, 38px); letter-spacing: -.03em; line-height: 1.1; margin: 0 0 28px; text-wrap: balance; }
+.stack { display: flex; flex-direction: column; gap: 16px; }
+.chip { align-self: flex-start; font: 500 11.5px/1 var(--f-mono); padding: 5px 8px; border-radius: 6px; }
+.chip.em { background: var(--em); color: var(--em-ink); } .chip.pm { background: var(--pm); color: var(--pm-ink); } .chip.dev { background: var(--dev); color: var(--dev-ink); }
+.card { border: 1px solid var(--line); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.card h3 { font-weight: 600; font-size: 21px; letter-spacing: -.02em; line-height: 1.2; margin: 0; }
+.card p { margin: 0; color: var(--muted); }
+.feature { background: var(--surface); border-color: transparent; display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,1fr); gap: 28px; }
+.feature .col { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.feature h3 { font-size: 28px; }
+.label { font: 500 11.5px/1 var(--f-mono); color: var(--faint); text-transform: uppercase; letter-spacing: .08em; }
+.feature ul { margin: 10px 0 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; }
+.trio { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 28px 32px; }
+.trio > div { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.trio > div + div { border-left: 1px solid var(--line); padding-left: 32px; }
+
+.principles { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 40px; }
+.principles h3 { font-weight: 600; font-size: 19px; margin: 0 0 8px; }
+.principles p { margin: 0; color: var(--muted); }
+
+.role { display: grid; grid-template-columns: 190px minmax(0,1fr); gap: 6px 32px; padding-block: 18px; }
+.role .when { font: 400 12.5px/1.7 var(--f-mono); color: var(--faint); font-variant-numeric: tabular-nums; }
+.role h3 { font-weight: 600; font-size: 19px; margin: 0; }
+.role h3 small { font-weight: 400; color: var(--muted); font-size: 15px; }
+.role p { margin: 6px 0 0; color: var(--muted); }
+
+.details { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; }
+.panel { background: var(--surface); border-radius: 16px; padding: 22px; min-width: 0; }
+.panel h3 { font: 500 12.5px/1 var(--f-mono); color: var(--faint); margin: 0 0 16px; text-transform: uppercase; letter-spacing: .08em; }
+.pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.pills li { background: var(--bg); border: 1px solid var(--line); font-size: 14px; padding: 5px 10px; border-radius: 999px; }
+.pills.quiet li { color: var(--muted); font-size: 13px; }
+.sub { font: 500 11.5px/1 var(--f-mono); color: var(--faint); margin: 18px 0 10px; }
+.list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; }
+.list b { font-weight: 600; display: block; }
+.list span { color: var(--muted); font-size: 14.5px; }
+
+.contact { margin-top: 88px; border-radius: 22px; background: var(--ink); color: #fff; padding: 48px; display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-end; justify-content: space-between; }
+.contact h2 { color: #fff; margin: 0; flex: 1 1 420px; min-width: 0; font-size: clamp(30px, 4vw, 44px); }
+.contact .hl { color: var(--ink); }
+.contact .cta { flex: 0 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 10px; }
+.contact .btn { justify-content: space-between; padding: 14px 16px; font-size: 14.5px; background: #1d201f; color: #fff; border-color: #2c302e; }
+.contact .btn.lime { background: var(--em); color: var(--ink); border-color: var(--em); }
+footer { padding-block: 28px 40px; color: var(--faint); font: 400 12.5px/1.4 var(--f-mono); }
+
+@media (max-width: 860px) {
+  .navlinks { display: none; }
+  .feature { grid-template-columns: minmax(0,1fr); }
+  .trio, .principles, .details { grid-template-columns: minmax(0,1fr); }
+  .trio > div + div { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); padding-top: 24px; }
+  .principles { gap: 28px; }
+}
+@media (max-width: 640px) {
+  .hero { padding-block: 40px 32px; }
+  .metrics { grid-template-columns: minmax(0,1fr); }
+  .metric { border-left: 0; }
+  .metric + .metric { border-top: 1px solid var(--line); }
+  section.block { padding-top: 64px; }
+  .card { padding: 22px; }
+  .role { grid-template-columns: minmax(0,1fr); padding-block: 14px; }
+  .contact { padding: 32px 24px; margin-top: 64px; }
+  .btn.dl .txt { display: none; }
+}
+</style>
+</head>
+<body>
+
+
+<div class="site" id="site" data-lang="en">
+
+<nav class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Estefany Salas</a>
+    <div class="navright">
+      <div class="navlinks">
+        <a href="#work"><span lang="en">Work</span><span lang="es">Proyectos</span></a>
+        <a href="#leadership"><span lang="en">Leadership</span><span lang="es">Liderazgo</span></a>
+        <a href="#career"><span lang="en">Career</span><span lang="es">Trayectoria</span></a>
+        <a href="#contact"><span lang="en">Contact</span><span lang="es">Contacto</span></a>
+      </div>
+      <div class="seg" role="group" aria-label="Language">
+        <button type="button" id="btn-en" data-set="en" aria-pressed="true">EN</button>
+        <button type="button" id="btn-es" data-set="es" aria-pressed="false">ES</button>
+      </div>
+      <a class="btn dark dl" id="dl" href="Estefany_Salas_CV_EN.pdf" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>
+        <span class="txt"><span lang="en">Download CV</span><span lang="es">Descargar CV</span></span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="top">
+
+  <header class="hero">
+    <h1 lang="en">I lead product and engineering teams that deliver <span class="serif hl hl-em">business results.</span></h1>
+    <h1 lang="es">Lidero equipos de producto e ingeniería que generan <span class="serif hl hl-em">resultados de negocio.</span></h1>
+    <p class="lede" lang="en"><span class="hl hl-dev">Developer</span>, then <span class="hl hl-pm">product manager</span>, now <span class="hl hl-em">engineering manager</span> at Platzi. I speak business, client and engineering, so my teams build the right thing and ship it well.</p>
+    <p class="lede" lang="es"><span class="hl hl-dev">Desarrolladora</span>, luego <span class="hl hl-pm">product manager</span>, hoy <span class="hl hl-em">engineering manager</span> en Platzi. Hablo el idioma del negocio, de los clientes y de ingeniería, así que mis equipos construyen lo correcto y lo entregan bien.</p>
+    <div class="actions">
+      <button type="button" class="btn dark copy" data-msg="m1"><span lang="en">Email</span><span lang="es">Correo</span> <span class="mono">estefanycss@gmail.com</span></button>
+      <a class="btn" href="https://www.linkedin.com/in/estefanycss/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <span class="toast" id="m1" hidden></span>
+    </div>
+  </header>
+
+  <div class="metrics">
+    <div class="metric"><div class="n">1/3</div>
+      <div class="l" lang="en">of Platzi's engineering and product team, under my lead</div>
+      <div class="l" lang="es">del equipo de ingeniería y producto de Platzi, a mi cargo</div></div>
+    <div class="metric"><div class="n"><span lang="en">1 month</span><span lang="es">1 mes</span> <span class="arrow">→</span> <span lang="en">1 day</span><span lang="es">1 día</span></div>
+      <div class="l" lang="en">to build a course with Platzi Learn</div>
+      <div class="l" lang="es">para crear un curso con Platzi Learn</div></div>
+    <div class="metric"><div class="n">+10%</div>
+      <div class="l" lang="en">in average sales ticket for a client trained with Learn</div>
+      <div class="l" lang="es">en el ticket promedio de venta de un cliente formado con Learn</div></div>
+  </div>
+
+  <section class="block" id="work">
+    <h2 lang="en">Products I've <span class="serif">shipped and scaled</span></h2>
+    <h2 lang="es">Productos que he <span class="serif">lanzado y escalado</span></h2>
+    <div class="stack">
+      <article class="card feature">
+        <div class="col">
+          <span class="chip em">Engineering Manager · 2026</span>
+          <h3>Platzi Learn</h3>
+          <p lang="en">Companies keep their know-how in docs, calls and slides. Learn, Platzi's AI product, turns it into courses for their teams.</p>
+          <p lang="es">Las empresas guardan su conocimiento en documentos, llamadas y presentaciones. Learn, el producto de IA de Platzi, lo convierte en cursos para sus equipos.</p>
+        </div>
+        <div class="col" style="gap:0">
+          <div class="label"><span lang="en">What I did</span><span lang="es">Lo que hice</span></div>
+          <ul lang="en"><li>Built the implementations team from zero.</li><li>Defined the Forward Deploy Engineer role.</li><li>Lead the teams that bring Learn to clients like Claro, Rappi and Simetrik.</li></ul>
+          <ul lang="es"><li>Construí el equipo de implementaciones desde cero.</li><li>Definí el rol de Forward Deploy Engineer.</li><li>Lidero los equipos que llevan Learn a clientes como Claro, Rappi y Simetrik.</li></ul>
+        </div>
+      </article>
+
+      <article class="card" style="gap:22px">
+        <span class="chip pm">Product Manager · 2022–2026</span>
+        <div class="trio">
+          <div><h3 lang="en">Public home redesign</h3><h3 lang="es">Rediseño de la home pública</h3>
+            <p lang="en">Led the redesign of Platzi's public home. Registration and purchase conversion went up.</p>
+            <p lang="es">Lideré el rediseño de la home pública de Platzi. Subió la conversión a registro y a compra.</p></div>
+          <div><h3 lang="en">Referral program</h3><h3 lang="es">Programa de referidos</h3>
+            <p lang="en">Students invite friends to a 7-day free trial. A new acquisition channel I launched.</p>
+            <p lang="es">Los estudiantes invitan a sus amigos a 7 días gratis. Un nuevo canal de adquisición que lancé.</p></div>
+          <div><h3 lang="en">Automated renewals</h3><h3 lang="es">Renovaciones automáticas</h3>
+            <p lang="en">With my team, automated the full subscription renewal flow: product, communications and the experience around it.</p>
+            <p lang="es">Con mi equipo automatizamos todo el flujo de renovación de suscripciones: producto, comunicaciones y la experiencia completa.</p></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="chip dev"><span lang="en">Developer</span><span lang="es">Desarrolladora</span> · Product Owner</span>
+        <h3 lang="en">New Student Home and class view</h3><h3 lang="es">Nuevo Student Home y vista de clases</h3>
+        <p lang="en">Led the new class view on React microfrontends and owned the new Student Home. More students started taking classes, and both pages got faster.</p>
+        <p lang="es">Lideré la nueva vista de clases sobre microfrontends en React y fui dueña del nuevo Student Home. Más estudiantes empezaron a tomar clases y ambas páginas se volvieron más rápidas.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="leadership">
+    <h2 lang="en">Leadership built <span class="serif">from every seat</span></h2>
+    <h2 lang="es">Un liderazgo construido <span class="serif">desde cada rol</span></h2>
+    <div class="principles">
+      <div><h3 lang="en">Translate between worlds</h3><h3 lang="es">Traducir entre mundos</h3>
+        <p lang="en">I've sat in each seat, so I can turn a client problem into a product decision and a plan the team believes in.</p>
+        <p lang="es">He estado en cada rol, así que puedo convertir un problema de un cliente en una decisión de producto y en un plan en el que el equipo cree.</p></div>
+      <div><h3 lang="en">Decide with evidence</h3><h3 lang="es">Decidir con evidencia</h3>
+        <p lang="en">Roadmaps start with clients, account managers and customer success, then get checked against the numbers.</p>
+        <p lang="es">Los roadmaps empiezan con clientes, account managers y customer success, y después se validan con los números.</p></div>
+      <div><h3 lang="en">Grow people, hold the bar</h3><h3 lang="es">Hacer crecer a las personas sin bajar la barra</h3>
+        <p lang="en">I invest in each person's skills and keep quality high when we move fast.</p>
+        <p lang="es">Invierto en las habilidades de cada persona y sostengo la calidad aunque vayamos rápido.</p></div>
+    </div>
+  </section>
+
+  <section class="block" id="career">
+    <h2><span lang="en">Career</span><span lang="es">Trayectoria</span></h2>
+    <div class="role"><div class="when"><span lang="en">Feb 2026 – present</span><span lang="es">feb. 2026 – actualidad</span></div>
+      <div><h3>Engineering Manager <small>· Platzi</small></h3>
+        <p lang="en">B2B, mobile and Learn implementations teams. Enterprise roadmap and sales support on RFPs.</p>
+        <p lang="es">Equipos de B2B, mobile e implementaciones de Learn. Roadmap enterprise y apoyo a ventas en RFPs.</p></div></div>
+    <div class="role"><div class="when"><span lang="en">Feb 2022 – Jan 2026</span><span lang="es">feb. 2022 – ene. 2026</span></div>
+      <div><h3>Product Manager <small>· Platzi</small></h3>
+        <p lang="en">Acquisition, retention and student experience. Brazil launch.</p>
+        <p lang="es">Adquisición, retención y experiencia del estudiante. Lanzamiento en Brasil.</p></div></div>
+    <div class="role"><div class="when"><span lang="en">Nov 2019 – Feb 2022</span><span lang="es">nov. 2019 – feb. 2022</span></div>
+      <div><h3><span lang="en">Frontend Developer</span><span lang="es">Desarrolladora Frontend</span> <small>· Platzi</small></h3>
+        <p lang="en">Class view, Student Home and content streaming.</p>
+        <p lang="es">Vista de clases, Student Home y streaming de contenido.</p></div></div>
+    <div class="role"><div class="when"><span lang="en">Jul 2018 – Oct 2019</span><span lang="es">jul. 2018 – oct. 2019</span></div>
+      <div><h3><span lang="en">Frontend Developer</span><span lang="es">Desarrolladora Frontend</span> <small>· Monoku</small></h3>
+        <p lang="en">Built iOS and Android apps with React Native, including a self-checkout app with product registration and payment management.</p>
+        <p lang="es">Desarrollé aplicaciones para iOS y Android con React Native, entre ellas una app de self-checkout con registro de productos y manejo de pagos.</p></div></div>
+    <div class="role"><div class="when"><span lang="en">Jul 2016 – May 2018</span><span lang="es">jul. 2016 – may. 2018</span></div>
+      <div><h3><span lang="en">Co-founder and Frontend Developer</span><span lang="es">Cofundadora y Desarrolladora Frontend</span> <small>· FácilMédica</small></h3>
+        <p lang="en">Co-founded a health startup and built the app's frontend: booking for medical appointments and lab tests, with online payments.</p>
+        <p lang="es">Cofundé una startup de salud y construí el frontend de la app: agendamiento de citas médicas y laboratorios, con pagos en línea.</p></div></div>
+    <div class="role"><div class="when"><span lang="en">Mar 2016 – Jun 2016</span><span lang="es">mar. 2016 – jun. 2016</span></div>
+      <div><h3><span lang="en">Frontend Developer</span><span lang="es">Desarrolladora Frontend</span> <small>· Noko Arts</small></h3>
+        <p lang="en">Frontend work on the Corottos project and on the Noko Arts and Libertarios websites.</p>
+        <p lang="es">Trabajo frontend en el proyecto Corottos y en los sitios de Noko Arts y Libertarios.</p></div></div>
+  </section>
+
+  <section class="block">
+    <div class="details">
+      <div class="panel">
+        <h3><span lang="en">Skills</span><span lang="es">Aptitudes</span></h3>
+        <ul class="pills" lang="en"><li>Leadership</li><li>Product Strategy</li><li>Artificial Intelligence</li><li>B2B SaaS</li></ul>
+        <ul class="pills" lang="es"><li>Liderazgo</li><li>Estrategia de producto</li><li>Inteligencia artificial</li><li>B2B SaaS</li></ul>
+        <p class="sub"><span lang="en">Technical background</span><span lang="es">Base técnica</span></p>
+        <ul class="pills quiet"><li><span lang="en">LLM &amp; RAG</span><span lang="es">LLM y RAG</span></li><li>React</li><li>React Native</li><li>JavaScript</li></ul>
+      </div>
+      <div class="panel">
+        <h3><span lang="en">Speaking</span><span lang="es">Charlas</span></h3>
+        <ul class="list">
+          <li><b>Platzi Business Forum</b><span lang="en">AI strategy for VPs and C-level executives</span><span lang="es">Estrategia de IA para VPs y C-levels</span></li>
+          <li><b>Platzi Conf</b><span lang="en">How Platzi generates courses with AI at scale</span><span lang="es">Cómo Platzi genera cursos con IA a escala</span></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3><span lang="en">Education &amp; languages</span><span lang="es">Educación e idiomas</span></h3>
+        <ul class="list">
+          <li><b lang="en">Computer Engineering, with honors</b><b lang="es">Ingeniería en Informática, con honores</b><span>Universidad Nacional Experimental del Táchira · 2019</span></li>
+          <li><div><b style="display:inline" lang="en">Spanish:</b><b style="display:inline" lang="es">Español:</b> <span lang="en">native</span><span lang="es">nativo</span></div>
+              <div><b style="display:inline" lang="en">English:</b><b style="display:inline" lang="es">Inglés:</b> <span lang="en">professional</span><span lang="es">profesional</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 lang="en">Building a team that needs <span class="serif hl hl-em">product and AI leadership?</span></h2>
+    <h2 lang="es">¿Tu equipo necesita <span class="serif hl hl-em">liderazgo de producto e IA?</span></h2>
+    <div class="cta">
+      <button type="button" class="btn lime copy" data-msg="m2"><span><span lang="en">Email</span><span lang="es">Correo</span></span><span class="mono">estefanycss@gmail.com</span></button>
+      <a class="btn" href="https://www.linkedin.com/in/estefanycss/" target="_blank" rel="noopener"><span>LinkedIn</span><span class="mono">/in/estefanycss ↗</span></a>
+      <span class="toast" id="m2" hidden style="align-self:flex-start"></span>
+    </div>
+  </section>
+
+  <footer>Estefany Salas · Bogotá, Colombia</footer>
+</main>
+</div>
+
+<script>
+(function () {
+  var site = document.getElementById('site');
+  var lang = 'en';
+  var T = {
+    en: { copied: 'Email copied', sel: 'Email selected, copy it', saving: 'Preparing PDF…', saved: 'Downloaded', fail: 'Download not available here' },
+    es: { copied: 'Correo copiado', sel: 'Correo seleccionado, cópialo', saving: 'Preparando PDF…', saved: 'Descargado', fail: 'La descarga no está disponible aquí' }
+  };
+  function setLang(l) {
+    if (l !== 'en' && l !== 'es') l = 'en';
+    lang = l;
+    site.setAttribute('data-lang', l);
+    document.documentElement.lang = l;
+    document.querySelectorAll('.seg button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.set === l ? 'true' : 'false'); });
+  }
+  var h = (location.hash || '').replace('#', '');
+  var start = (h === 'en' || h === 'es') ? h : null;
+    setLang(start || 'en');
+  document.querySelectorAll('.seg button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      setLang(b.dataset.set);
+      try { history.replaceState(null, '', '#' + b.dataset.set); } catch (e) {}
+    });
+  });
+  window.addEventListener('hashchange', function () { var x = location.hash.replace('#', ''); if (x === 'en' || x === 'es') setLang(x); });
+
+  function flash(el, text) { el.textContent = text; el.hidden = false; clearTimeout(el._t); el._t = setTimeout(function () { el.hidden = true; }, 2200); }
+
+  document.querySelectorAll('.copy').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var msg = document.getElementById(btn.dataset.msg);
+      var email = 'estefanycss@gmail.com';
+      function fallback() {
+        var el = btn.querySelector('.mono'); var r = document.createRange(); r.selectNodeContents(el);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); flash(msg, T[lang].sel);
+      }
+      try { navigator.clipboard.writeText(email).then(function () { flash(msg, T[lang].copied); }, fallback); } catch (e) { fallback(); }
+    });
+  });
+
+  var dl = document.getElementById('dl');
+  function syncDl() { var f = lang === 'es' ? 'Estefany_Salas_CV_ES.pdf' : 'Estefany_Salas_CV_EN.pdf'; dl.setAttribute('href', f); }
+  syncDl();
+  document.querySelectorAll('.seg button').forEach(function (b) { b.addEventListener('click', syncDl); });
+  window.addEventListener('hashchange', syncDl);
+})();
+</script>
+
+</body>
+</html>
